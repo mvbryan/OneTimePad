@@ -29,6 +29,7 @@ fun main(){
     val random = SecureRandom()
     val key = ByteArray(plainBytes.size)
     random.nextBytes(key)
+    println("This is the key in hex:")
     for (b in key)
         print(String.format("%02X", b))
 
@@ -74,7 +75,7 @@ fun main(){
     val decryptTime = System.currentTimeMillis() - startDecrypt
 
     println("Decryption took: $decryptTime milliseconds")
-    
+
     println("The decrypted text is: ${String(plainTextByteArray, Charsets.UTF_8)}")
 
 
